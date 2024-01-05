@@ -1,5 +1,4 @@
 import Image from "next/image";
-import pic from "@/public/thumbnail.png";
 import google from "@/public/google.svg";
 import vector from "@/public/vector.svg";
 import Link from "next/link";
@@ -7,11 +6,11 @@ import Link from "next/link";
 const Login = () => {
   return (
     <>
-      <div className="flex flex-row text-[#525252]">
-        <div className="portrait:hidden w-[60vw] object-cover">
-            <img src="/thumbnail.png" alt="alternate" />
+      <div className="flex flex-col lg:xl:flex-row text-[#525252]">
+        <div className="portrait:hidden w-screen lg:xl:w-[60vw] flex-1 ">
+            <img className="object-cover h-full w-full" loading='lazy' src="/thumbnail.png" alt="alternate" />
         </div>
-        <div className="actions w-[40vw] portrait:w-[100vw] h-screen">
+        <div className="actions lg:xl:w-[40vw] w-screen portrait:w-[100vw] flex-1">
           {/* frame-14 */}
           <div className="m-16">
             <Image className="my-4" src={vector} alt="" />
@@ -28,7 +27,7 @@ const Login = () => {
                   See what is going on with your business
                 </h3>
               </div>
-              <button className="frame-1 flex w-full justify-center py-1 border border-solid border-[#E8E8E8]  rounded-[.3rem] flex-row text-[#828282]">
+              <button className="frame-1 flex w-full justify-center p-2 border border-solid border-[#E8E8E8]  rounded-[.3rem] flex-row text-[#828282]">
                 <Image className="mx-2" src={google} alt="" />
                 Continue with Google
               </button>
@@ -63,7 +62,7 @@ const Login = () => {
                     {/* 14px */}
                     <h4 className="text-[#828282]">Password</h4>
                     <input
-                      className="border border-solid border-[#e8e8e8] w-full rounded-[.3rem] p-2 placeholder:text-[#e0e0e0] placeholder:align-middle focus:border focus:border-solid focus:border-red-800"
+                      className="border border-solid border-[#e8e8e8] w-full rounded-[.3rem] p-2 placeholder:text-[#e0e0e0] placeholder:align-middle "
                       type="password"
                       placeholder="••••••••••••"
                     />
